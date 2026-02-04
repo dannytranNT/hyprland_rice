@@ -1,0 +1,242 @@
+
+
+/* Global Reset */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    min-height: 0;
+    transition: all 0.25s cubic-bezier(0.4, 0.0, 0.2, 1);
+    font-weight: bold;
+}
+
+window#waybar {
+    background: transparent;
+    color: #a2c9fd;
+}
+
+/* Common Container Styles (Left, Center, Right) */
+.modules-left, .modules-right, .modules-center {
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+
+/* ============================================================ */
+/* THE MASTER BLOCK                                             */
+/* All modules sharing the same background, color, and shadow   */
+/* ============================================================ */
+#window,
+#clock,
+#battery,
+#pulseaudio,
+#menu,
+#hardware,
+#custom-power,
+#wifi,
+#blue,
+#brightness,
+#custom-swaync,
+#custom-launcher,
+#custom-gemini,
+#network {
+    border-bottom: 2px solid #F4692E;
+    margin-right: 15px;
+}
+
+
+/* ============================================================ */
+/* INDIVIDUAL OVERRIDES (Margins, Padding, Unique Borders)      */
+/* ============================================================ */
+#workspaces {
+    padding: 0px 10px;
+    font-size: 2px;
+    transition: all 0.3s ease-in-out;
+    border-bottom: 2px solid #F4692E;
+    border-radius: 5px;
+}
+
+#window{
+    border-bottom: 2px solid #F4692E;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+#clock {
+    border-bottom: 2px solid #F4692E;
+    font-size: 18px;
+    font-weight: 900;
+    border-radius: 15px;
+}
+
+#battery {
+    font-size: 14px;
+    border-radius: 10px;
+    padding: 0px 10px;
+    margin: 4px 5px 4px 0px;
+}
+
+#pulseaudio, #hardware, #wifi, #blue, #brightness, #network, #memory, #cpu {
+    border-bottom: 2px solid #F4692E;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+#menu {
+    border-radius: 10px;
+    padding: 0px 4px 0px 10px;
+    margin: 4px 5px 4px 0px;
+}
+
+#custom-power {
+    border-radius: 10px;
+    padding: 0px 4px 0px 10px;
+    margin: 4px 0px 4px 5px;
+}
+
+#custom-swaync {
+    border-radius: 10px;
+    padding: 0px 15px 0px 10px;
+    margin: 4px 0px 4px 5px;
+}
+
+/* Unique Padding/Spacing for Internal Elements */
+#brightness { 
+    padding: 0px 4px 0px 9px;
+}
+
+/* ============================================================ */
+/* SUBSIDIARY ELEMENTS (Buttons, Sliders, Icons)               */
+/* ============================================================ */
+
+/* Workspaces Internal */
+#workspaces button {
+    font-size: 1px;
+    background: #FFFFFF;
+    color: transparent;
+    border-radius: 100px;
+    min-width: 5px;
+    margin: 10px 5px;
+    
+   
+}
+
+#workspaces button:hover {
+    background-color: #F4692E;
+    box-shadow: 
+        inset 0 1px 2px rgba(224, 132, 57, 0.663),
+        0 1px 3px rgba(224, 132, 57, 0.663);
+}
+
+#workspaces button.active {
+    background-color: #F4692E;
+    min-width: 35px;
+    border-radius: 100px;
+}
+
+/* Sliders (Audio & Backlight) */
+ #backlight-slider { 
+    background-color: transparent;
+}
+
+#backlight-slider slider {
+    background-color: #a2c9fd;
+    border-radius: 100px;
+    min-width: 14px;
+    min-height: 14px;
+    box-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.3),
+        0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+ #backlight-slider slider:hover {
+    min-width: 16px;
+    min-height: 16px;
+    box-shadow: 
+        0 3px 6px rgba(0, 0, 0, 0.4),
+        0 0 0 3px rgba(255, 255, 255, 0.15);
+}
+
+#backlight-slider trough {
+    min-height: 5px;
+    min-width: 80px;
+    border-radius: 5px;
+    background: #001c37;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#backlight-slider highlight {
+    border-radius: 5px;
+    background: #a2c9fd;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Transparent sub-icons */
+#custom-launcher2, 
+#custom-hyprshot, 
+#custom-settings, 
+#disk,  
+#custom-shutdown, 
+#custom-reboot, 
+#custom-logout, 
+#custom-lock {
+    background-color: transparent;
+    margin: 0px 4px;
+    padding: 2px;
+}
+
+#memory, #cpu {
+    border-bottom: 2px solid #F4692E;
+    margin-right: 15px;
+}
+
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+/* Tooltips */
+tooltip {
+    background: rgba(43, 48, 59, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 8px 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+tooltip label { 
+    color: #a2c9fd;
+    font-weight: 500;
+}
+
+#power-profiles-daemon {
+    border-bottom: 2px solid #F4692E;
+    padding-right: 15px;
+    border-radius: 5px;
+}
+
+#power-profiles-daemon.performance {
+   
+    color: #ffffff;
+}
+
+#power-profiles-daemon.balanced {
+    color: #ffffff;
+}
+
+#power-profiles-daemon.power-saver {
+  
+    color: #000000;
+}
+
+#custom-launcher {
+	font-size: 25px;
+	padding-left: 8px;
+    border-bottom: 2px solid #F4692E;
+    border-radius: 5px;
+}

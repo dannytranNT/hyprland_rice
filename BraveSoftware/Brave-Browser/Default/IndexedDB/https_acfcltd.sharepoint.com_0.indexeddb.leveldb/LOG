@@ -1,0 +1,5 @@
+2026/02/04-22:54:56.437 86e Creating DB /home/danny/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_acfcltd.sharepoint.com_0.indexeddb.leveldb since it was missing.
+2026/02/04-22:54:56.442 86e Reusing MANIFEST /home/danny/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_acfcltd.sharepoint.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/02/04-22:55:04.331 872 Level-0 table #5: started
+2026/02/04-22:55:04.349 872 Level-0 table #5: 2302294 bytes OK
+2026/02/04-22:55:04.353 872 Delete type=0 #3

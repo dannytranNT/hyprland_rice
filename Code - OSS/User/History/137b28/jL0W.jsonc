@@ -1,0 +1,41 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "source": "arch_small",
+        "color": {
+            "type": "gradient",
+            "colors": ["#0077ff", "#00aaff"]
+        }
+    },
+    "display": {
+        "separator": "  ",
+        "color": {
+            "keys": "#3399ff",
+            "values": "#99ccff"
+        }
+    },
+    "modules": [
+        {
+            "type": "custom",
+            "format": "{#00aaff}danny@archlinux{/}"
+        },
+        "separator",
+        { "type": "os", "key": "  OS", "keyColor": "#3399ff", "valueColor": "#99ccff" },
+        { "type": "kernel", "key": "󰌢 Kernel", "keyColor": "#3399ff", "valueColor": "#99ccff" },
+        { "type": "wm", "key": "󱂬 WM", "keyColor": "#3399ff", "valueColor": "#99ccff" },
+        { "type": "de", "key": " DE", "keyColor": "#3399ff", "valueColor": "#99ccff" },
+        { "type": "shell", "key": " Shell", "keyColor": "#3399ff", "valueColor": "#99ccff" },
+        { "type": "terminal", "key": " Terminal", "keyColor": "#3399ff", "valueColor": "#99ccff" },
+        { "type": "cpu", "key": " CPU", "keyColor": "#3399ff", "valueColor": "#99ccff" },
+        { "type": "gpu", "key": "󰍛 GPU", "keyColor": "#3399ff", "valueColor": "#99ccff" },
+        { "type": "memory", "key": " RAM", "keyColor": "#3399ff", "valueColor": "#99ccff" },
+        { "type": "disk", "key": " Disk", "keyColor": "#3399ff", "valueColor": "#99ccff" },
+        { "type": "uptime", "key": " Uptime", "keyColor": "#3399ff", "valueColor": "#99ccff" },
+        { "type": "packages", "key": " Packages", "keyColor": "#3399ff", "valueColor": "#99ccff" },
+        "separator",
+        {
+            "type": "custom",
+            "format": "{#0077ff}“Stay cool, stay blue 😎💙”{/}"
+        }
+    ]
+}
